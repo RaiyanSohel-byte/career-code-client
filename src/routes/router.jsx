@@ -11,6 +11,7 @@ import PrivateRoute from "./privateRoute/PrivateRoute";
 import AboutSection from "../pages/AboutSection";
 import ContactSection from "../pages/ContactSection";
 import ApplicationForm from "../components/ApplicationForm";
+import ApplicationsDetails from "../pages/applications/ApplicationsDetails";
 
 export const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ export const router = createBrowserRouter([
             <ApplicationForm />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/myApplications/:id",
+        element: <ApplicationsDetails />,
       },
       {
         path: "/about",
